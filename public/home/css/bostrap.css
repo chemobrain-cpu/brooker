@@ -5053,7 +5053,8 @@ textarea.input-group-sm>.input-group-btn>.btn {
 .nav-tabs>li.active>a:hover {
     color: #555;
     cursor: default;
-    background-color: #fff;
+    color: white;
+    background: #117daf;
     border: 1px solid #ddd;
     border-bottom-color: transparent
 }

@@ -114,9 +114,11 @@
                     <div class="col-md-3 col-lg-3">
                         <ul class="unstyled user">
                             <li class="sign-in"><a href="/login" class="btn btn-primary" style="height:50px;display:flex;align-items: center;justify-content: center;"><i class="fa fa-user"></i>
-                                    sign in</a></li>
+                                    sign in</a>
+                            </li>
                             <li class="sign-up"><a href="/signup" class="btn btn-primary" style="height:50px;display:flex;align-items: center;justify-content: center;"><i
-                                        class="fa fa-user-plus"></i> register</a></li>
+                                        class="fa fa-user-plus"></i> register</a>
+                            </li>
                         </ul>
                     </div>
                     <!-- User Sign In/Sign Up Ends -->
@@ -174,40 +176,17 @@
                     <div>
                         <!-- Section Title Starts -->
                         <div class="row text-center">
-                            <h2 class="title-head">Account <span>login</span></h2>
+                            <h2 class="title-head" style="font-size:2rem">300 <span></span></h2>
                         </div>
                         <!-- Section Title Ends -->
                         <div clas="row justify-content-center">
-                            <div class="col-md-4 col-md-offset-4">
+                            <div class="col-md-4 col-md-offset-4"
+                                style="display:flex;flex-direction:column;justify-content:center;align-items:center;gap:2rem">
                                 <!-- Form Starts -->
-                                <form method="post" action="/login">
-                                    <input type="hidden" name="authenticate" value="user">
-                                    <!-- Input Field Starts -->
-                                    <div class="form-group">
-                                        <input class="form-control" name="email" placeholder="EMAIL ADDRESS"
-                                            type="email"
-                                            style="height:70px;background-color: rgb(26, 22, 22);border:1px solid  rgb(26, 22, 22)"
-                                            required>
-                                    </div>
-                                    <!-- Input Field Ends -->
-                                    <!-- Input Field Starts -->
-                                    <div class="form-group">
-                                        <input class="form-control" name="password" placeholder="PASSWORD"
-                                            type="password"
-                                            style="height:70px;background-color: rgb(26, 22, 22);border:1px solid  rgb(26, 22, 22)"
-                                            required>
-                                    </div>
-                                    <!-- Input Field Ends -->
-                                    <!-- Submit Form Button Starts -->
-                                    <div class="form-group">
-                                        <button class="btn btn-primary"  type="submit" style="height:50px;width:200px;display:flex;align-items: center;justify-content: center;">login</button>
-                                        <p class="text-center">Don't have an account yet? <a href="/signup" style="height:50px;display:flex;align-items: center;justify-content: center;">Register
-                                                Now</a>
-                                            <br>
-                                        <p class="text-center"><a href="/forgot-password">Forgot Password?</a>
-                                    </div>
-                                    <!-- Submit Form Button Ends -->
-                                </form>
+                                <h3 style="color:rgb(146, 50, 50)"><%=message%></h3>
+
+
+                                <button class="btn-primary" href = "/"><a href="/" style="color:white""">Try again</a></button>
 
                             </div>
                         </div>
@@ -241,7 +220,7 @@
                                 <h4>Help & Support</h4>
                                 <div class="menu">
                                     <ul>
-                                        <li><a href="/signup">Register</a></li>
+                                        <li><a href="/signup" >Register</a></li>
                                         <li><a href="/login">Login</a></li>
                                     </ul>
                                 </div>

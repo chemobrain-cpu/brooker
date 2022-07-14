@@ -7,47 +7,165 @@ const path = require("path")
 const fs = require("fs")
 const session = require("express-session");
 const mongoose = require("mongoose")
+const User = require("../database/databaseConfig").User
+const Wallet = require("../database/databaseConfig").Wallet
 
 
+module.exports.getDeposit = async (req, res, next) => {
+   if(!req.session.user){
+      
+      
+      return res.status(200).render('userAuth/login')
+   }
+   //get the wallet
+      let wallet = await Wallet.find()
 
+   res.status(200).render('userAuth/deposit',{wallet:wallet[0]})
 
+}
+module.exports.getTradecenter = async (req, res, next) => {
+    if(!req.session.user){
+      //go to logout screen
+      return res.status(200).render('userAuth/login')
+   }
+   res.status(200).render('userAuth/tradecenter',{user:req.session.user})
 
+}
 
-module.exports.getDeposit = async (req,res)=>{ 
+module.exports.getUpgrade = async (req, res, next) => {
+    if(!req.session.user){
+      //go to logout screen
+      return res.status(200).render('userAuth/login')
+   }
+   res.status(200).render('userAuth/upgrade',{user:req.session.user})
+}
+module.exports.getWithdrawal = async (req, res, next) => {
+    if(!req.session.user){
+      //go to logout screen
+      return res.status(200).render('userAuth/login')
+   }
+
+   res.status(200).render('userAuth/withdrawal',{user:req.session.user})
+
+}
+module.exports.getProfile = async (req, res, next) => {
+    if(!req.session.user){
+      //go to logout screen
+      return res.status(200).render('userAuth/login')
+   }
+   res.status(200).render('userAuth/profile',{user:req.session.user})
+
+}
+module.exports.getLoading = async (req, res, next) => {
+    if(!req.session.user){
+      //go to logout screen
+      return res.status(200).render('userAuth/login')
+   }
+   res.status(200).render('userAuth/loading',{user:req.session.user})
+
+}
+
+module.exports.getLogin = async (req, res, next) => {
+   res.status(200).render('userAuth/login')
+
+}
+module.exports.postLogin = async (req, res, next) => {
+   //do something
+   //authenticate: 'user',
+   let {email,password} = req.body
    
-   res.status(200).render('userAuth/deposit')
- 
-}
-module.exports.getTradecenter = async (req,res)=>{ 
+   let userExist = await User.findOne({ email: email })
+   if (!userExist) {
+      return res.status(409).render("loginError", { message: "user is not registered" })
+   }
+
+   let passwordIsCorrect = userExist.password === password
    
-   res.status(200).render('userAuth/tradecenter')
- 
+   if(!passwordIsCorrect){
+      return res.status(409).render("loginError", { message: "password incorrect" })
+
+   }
+
+   req.session.user = userExist
+   if(userExist.isAdmin){
+      let wallet = await Wallet.find()
+      console.log(wallet)
+      return res.status(200).render('adminAuth/profile',{user:req.session.user,wallet:wallet[0]})
+
+   }else{
+      return res.status(200).render('userAuth/tradecenter',{user:req.session.user})
+
+   }
+   
+
+}
+module.exports.getSignup = async (req, res, next) => {
+   res.status(200).render('userAuth/signup')
+
+}
+module.exports.postSignup = async (req, res, next) => {
+   //signup user
+   try {
+      let {
+         authenticate,
+         firstname,
+         lastname,
+         email,
+         phone,
+         country,
+         password,
+         confirm_password,
+
+      } = req.body
+
+      if (password !== confirm_password) {
+         return res.status(403).render("signupError", { message: "password does not match" })
+      }
+
+      //check if user is in database
+      let userExist = await User.findOne({ email: email })
+    
+      if (userExist) {
+         return res.status(409).render("signupError", { message: "user already exist" })
+      }
+
+      let newUser = new User({
+         _id: new mongoose.Types.ObjectId(),
+         firstName: firstname,
+         lastName: lastname,
+         email: email,
+         phone: phone,
+         countryOfResidence: country,
+         availableBalance: 0,
+         accountStatus: "none",
+         accountType: "Live Trading Account",
+         tradingPlan: "none",
+         isAdmin: authenticate == "user" ? "false" : "true",
+         password: password
+
+      })
+
+      let savedUser = await newUser.save()
+      if (!savedUser) {
+         return res.status(403).render("signupError", { message: "data could not be saved check your network" })
+      }
+      res.status(200).render('confirmation',{user:savedUser})
+
+   } catch (error) {
+      console.log(error)
+      error.message = error.message || "an error occured try later"
+      return next(error)
+
+   }
+
 }
 
-module.exports.getUpgrade = async (req,res)=>{ 
-   
-   res.status(200).render('userAuth/upgrade')
- 
-}
-module.exports.getWithdrawal = async (req,res)=>{ 
- 
-   res.status(200).render('userAuth/withdrawal')
- 
-}
-module.exports.getProfile = async (req,res)=>{ 
-   res.status(200).render('userAuth/profile')
- 
-}
-module.exports.getLoading = async (req,res)=>{ 
-   res.status(200).render('userAuth/loading')
- 
+module.exports.getLogout = async (req, res, next) => {
+   req.session.destroy()
+   res.redirect("/")
+
 }
 
-module.exports.getLogin = async (req,res)=>{ 
-    res.status(200).render('userAuth/login')
-  
- }
- module.exports.getSignup = async (req,res)=>{ 
-    res.status(200).render('userAuth/signup')
-  
- }
+User.find().then(data=>{
+   console.log(data)
+})

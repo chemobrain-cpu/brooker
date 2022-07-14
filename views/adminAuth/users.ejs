@@ -7,7 +7,7 @@
 
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-    <title>Trade Center | Jonestrade</title>
+    <title>Trade Center | jeffTFcryptoworld</title>
     <link rel="shortcut icon" type="image/x-icon" href="../images/favicon.png">
 
     <!-- Template CSS Files -->
@@ -139,8 +139,7 @@
                         <!-- User Account -->
                         <li class="dropdown user user-menu">
                             <a href="/profile#" class="dropdown-toggle" data-toggle="dropdown">
-                                <img src="Withdrawal _ files/user.png" class="user-image rounded-circle"
-                                    alt="User Image">
+                                <img src="../../userImage.png" class="user-image rounded-circle" alt="User Image">
                             </a>
                             <ul class="dropdown-menu scale-up">
                                 <!-- Menu Body -->
@@ -150,7 +149,7 @@
                                             <a href="/profile"><i class="ion ion-person"></i> My Profile</a>
                                         </div>
                                         <div class="col-12">
-                                            <a href="logout.php"><i class="icon-logout"></i> Logout</a>
+                                            <a href="/logout"><i class="icon-logout"></i> Logout</a>
                                         </div>
                                     </div>
                                     <!-- /.row -->
@@ -171,63 +170,41 @@
                         <a href="tradecenter
                 r.php">
                             <!-- logo for regular state and mobile devices -->
-                            <span><b>Jonestrade</b></span><b>
+                            <span><b>jeffTFcryptoworld</b></span><b>
                             </b>
                         </a><b>
                         </b>
                     </div><b>
                         <div class="image">
-                            <img src="Withdrawal _ files/user.png" class="user-image rounded-circle" alt="User Image">
+                            <img src="../../userImage.png" class="user-image rounded-circle" alt="User Image">
                         </div>
                     </b>
                 </div><b>
                     <!-- sidebar menu -->
                     <ul class="sidebar-menu tree" data-widget="tree">
                         <li class="nav-devider"></li>
+
                         <li class="">
-                            <a href="tradecenter
-                    r.php">
-                                <i class="fa fa-bar-chart"></i> <span>Trade Center</span>
+                            <a href="/adminprofile">
+                                <span>profile</span>
                                 <span class="pull-right-container">
                                     <i class="fa fa-angle-right pull-right"></i>
                                 </span>
                             </a>
                         </li>
-                        <li class="active">
-                            <a href="/profile">
-                                <i class="fa fa-user"></i> <span>Profile</span>
-                                <span class="pull-right-container">
-                                    <i class="fa fa-angle-right pull-right"></i>
-                                </span>
-                            </a>
-                        </li>
+                        <li class="nav-devider"></li>
                         <li class="">
-                            <a href="/deposit">
-                                <i class="cc BTC-alt"></i> <span>Deposit</span>
+                            <a href="/adminusers">
+                                <span>users</span>
                                 <span class="pull-right-container">
                                     <i class="fa fa-angle-right pull-right"></i>
                                 </span>
                             </a>
                         </li>
-                        <li class="">
-                            <a href="/withdrawal">
-                                <i class="fa fa-money"></i> <span>Withdrawal</span>
-                                <span class="pull-right-container">
-                                    <i class="fa fa-angle-right pull-right"></i>
-                                </span>
-                            </a>
-                        </li>
-                        <li class="">
-                            <a href="/upgrade">
-                                <i class="mdi mdi-arrow-up"></i> <span>Upgrade Account</span>
-                                <span class="pull-right-container">
-                                    <i class="fa fa-angle-right pull-right"></i>
-                                </span>
-                            </a>
-                        </li>
+                        <li class="nav-devider"></li>
                         <li>
-                            <a href="logout.php">
-                                <i class="icon-logout"></i> <span>Logout</span>
+                            <a href="/logout">
+                                <span>Logout</span>
                                 <span class="pull-right-container">
                                     <i class="fa fa-angle-right pull-right"></i>
                                 </span>
@@ -239,149 +216,70 @@
             </b>
         </aside><b>
             <!-- Content Wrapper. Contains page content -->
-            <div class="content-wrapper" style="min-height: 490px;">
+            <div class="content-wrapper" style="min-height: 490px;width:100%">
                 <!-- Content Header (Page header) -->
-                <section class="content-header">
+                <section class="content-header" style="margin-bottom: 50px;">
                     <h1>
-                        My Profile
+                        LIST OF USERS
                     </h1>
-                    <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="tradecenter
-                    r.php"><i class="fa fa-dashboard"></i> Home</a>
-                        </li>
-                        <li class="breadcrumb-item active">My Profile</li>
-                    </ol>
+
                 </section>
 
                 <!-- Main content -->
                 <section class="content">
-                    <div class="row">
-                        <div class="col-sm-12">
-                        </div>
-                    </div>
+                    <table class="table table-dark table-striped">
+                        <tr>
+                            <th>USERS EMAIL</th>
+                            <th>UPDATE ACCOUNT</th>
 
-                    <div class="row">
-                        <div class="col-md-12">
-                            <!-- Widget: user widget style 1 -->
-                            <div class="box box-widget widget-user">
-                                <!-- Add the bg color to the header using any of the bg-* classes -->
-                                <div class="widget-user-header bg-black"
-                                    style="background: url('images/22.png') center center;">
-                                    <h3 class="widget-user-username">Toyota camry</h3>
-                                </div>
-                                <div class="widget-user-image">
-                                    <img class="rounded-circle" src="../" alt="User Avatar">
-                                </div>
+                        </tr>
+                       
+                            <% users.map(user=>{%>
+                        <tr>
 
-                            </div>
-                            <!-- /.widget-user -->
-                        </div>
-                        <!-- /.col -->
-                    </div>
-                    <!-- /.row -->
+                            <td>
+                                <%=user.email %>
+                            </td>
+                            <td><a href="user/<%=user._id%>">upgrade</a></td>
 
-                    <div class="row">
-                        <div class="col-lg-6">
-                            <div class="box box-solid bg-dark">
-                                <div class="box-header with-border">
-                                    <h3 class="box-title"><i class="fa fa-user"></i> User Info</h3>
+                        </tr>
 
-                                    <div class="box-tools pull-right">
-                                        <button type="button" class="btn btn-box-tool" data-widget="collapse"><i
-                                                class="fa fa-minus"></i></button>
-                                        <button type="button" class="btn btn-box-tool" data-widget="remove"><i
-                                                class="fa fa-remove"></i></button>
-                                    </div>
-                                </div>
-                                <!-- /.box-header -->
-                                <div class="box-body">
-                                    <div class="list-group list-group-flush">
-                                        <p class="list-group-item"><i class="fa fa-user"></i> First Name: &nbsp;&nbsp;
-                                            <strong>Toyota</strong>
-                                        </p>
-                                        <p class="list-group-item"><i class="fa fa-user"></i> Last Name: &nbsp;&nbsp;
-                                            <strong>camry</strong>
-                                        </p>
-                                        <p class="list-group-item"> <i class="fa fa-envelope"></i> Email: &nbsp;&nbsp;
-                                            <strong>preciousarierhi@gmail.com</strong>
-                                        </p>
-                                        <p class="list-group-item"><i class="fa fa-phone"></i> Phone: &nbsp;&nbsp;
-                                            <strong>0908878990</strong>
-                                        </p>
-                                        <p class="list-group-item"><i class="fa fa-home"></i> Country of Residence:
-                                            &nbsp;&nbsp; <strong>Nigeria</strong> </p>
-                                    </div>
-                                </div>
-                                <!-- /.box-body -->
 
-                            </div>
-                            <!-- /.box -->
-                        </div>
-                        <!-- Col -->
+                        <%}) %>
 
-                        <div class="col-lg-6">
-                            <div class="box box-solid bg-dark">
-                                <div class="box-header with-border">
-                                    <h3 class="box-title"><i class="icon-wallet"></i> Account Info</h3>
+                            
+                    </table>
 
-                                    <div class="box-tools pull-right">
-                                        <button type="button" class="btn btn-box-tool" data-widget="collapse"><i
-                                                class="fa fa-minus"></i></button>
-                                        <button type="button" class="btn btn-box-tool" data-widget="remove"><i
-                                                class="fa fa-remove"></i></button>
-                                    </div>
-                                </div>
-                                <!-- /.box-header -->
-                                <div class="box-body">
-                                    <div class="list-group list-group-flush">
-                                        <p class="list-group-item"><i class="fa fa-money"></i> Available Balance:
-                                            &nbsp;&nbsp; <strong>0.00</strong></p>
-                                        <p class="list-group-item"><i class="fa fa-cogs"></i> Account Status:
-                                            &nbsp;&nbsp; <strong>Active</strong> </p>
-                                        <p class="list-group-item"><i class="fa fa-dashboard"></i> Account Type:
-                                            &nbsp;&nbsp; <strong>Live Trading Account</strong> </p>
-                                        <p class="list-group-item"><i class="fa fa-bar-chart"></i> Trading Plan:
-                                            &nbsp;&nbsp; <strong>Basic</strong> </p>
-                                    </div>
-                                </div>
-                                <!-- /.box-body -->
-
-                            </div>
-                            <!-- /.box -->
-                        </div>
-                        <!-- Col -->
-                    </div>
-                    <!-- Row -->
 
                 </section>
                 <!-- /.content -->
             </div>
             <!-- /.content-wrapper -->
             <footer class="main-footer">
-                © 2012 - 2022 <a href="https://www.jonestrade.net/">Jonestrade</a>. All Rights Reserved.
+                © 2012 - 2022 <a href="https://www.jeffTFcryptoworld.net/">jeffTFcryptoworld</a>. All Rights Reserved.
             </footer>
 
         </b>
     </div><b>
         <!-- ./wrapper -->
 
-       <!-- ./wrapper -->
-       <script src="../../../../dashboard/js/bootstrap.js"></script>
-       <script src="../../../../dashboard/js/../../dashboardr.js"></script>
-       <script src="../../../../dashboard/js/dataTable.js"></script>
-       <script src="../../../../dashboard/js/demo.js"></script>
-       <script src="../../../../dashboard/js/jquery1.js"></script>
-       <script src="../../../../dashboard/js/jquery2.js"></script>
-       <script src="../../../../dashboard/js/popper.js"></script>
-       <script src="../../../../dashboard/js/table.js"></script>
-       <script src="../../../../dashboard/js/template.js"></script>
+        <!-- ./wrapper -->
+        <script src="../../../../dashboard/js/bootstrap.js"></script>
+        <script src="../../../../dashboard/js/../../dashboardr.js"></script>
+        <script src="../../../../dashboard/js/dataTable.js"></script>
+        <script src="../../../../dashboard/js/demo.js"></script>
+        <script src="../../../../dashboard/js/jquery1.js"></script>
+        <script src="../../../../dashboard/js/jquery2.js"></script>
+        <script src="../../../../dashboard/js/popper.js"></script>
+        <script src="../../../../dashboard/js/table.js"></script>
+        <script src="../../../../dashboard/js/template.js"></script>
 
         <!-- GetButton.io widget -->
         <script type="text/javascript">
             (function () {
                 var options = {
                     whatsapp: "+", // WhatsApp number
-                    call_to_action: "Contact Jonestrade", // Call to action
+                    call_to_action: "Contact jeffTFcryptoworld", // Call to action
                     position: "left", // Position may be 'right' or 'left'
                 };
                 var proto = document.location.protocol, host = "getbutton.io", url = proto + "//static." + host;

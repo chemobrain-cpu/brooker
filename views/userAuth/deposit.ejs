@@ -6,7 +6,7 @@
 
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-    <title>Trade Center | Jonestrade</title>
+    <title>Trade Center | jeffTFcryptoworld</title>
     <link rel="shortcut icon" type="image/x-icon" href="../images/favicon.png">
 
     <!-- Template CSS Files -->
@@ -137,7 +137,7 @@
                         <!-- User Account -->
                         <li class="dropdown user user-menu">
                             <a href="index.php#" class="dropdown-toggle" data-toggle="dropdown">
-                                <img src="Withdrawal _ files/user.png" class="user-image rounded-circle"
+                                <img src="../../userImage.png" class="user-image rounded-circle"
                                     alt="User Image">
                             </a>
                             <ul class="dropdown-menu scale-up">
@@ -148,7 +148,7 @@
                                             <a href="/profile"><i class="ion ion-person"></i> My Profile</a>
                                         </div>
                                         <div class="col-12">
-                                            <a href="logout.php"><i class="icon-logout"></i> Logout</a>
+                                            <a href="/logout"><i class="icon-logout"></i> Logout</a>
                                         </div>
                                     </div>
                                     <!-- /.row -->
@@ -168,13 +168,13 @@
                     <div class="ulogo">
                         <a href="../../dashboardr.php">
                             <!-- logo for regular state and mobile devices -->
-                            <span><b>Jonestrade</b></span><b>
+                            <span><b>jeffTFcryptoworld</b></span><b>
                             </b>
                         </a><b>
                         </b>
                     </div><b>
                         <div class="image">
-                            <div align="center"><img src="Withdrawal _ files/user.png" class="user-image rounded-circle"
+                            <div align="center"><img src="../../userImage.png" class="user-image rounded-circle"
                                     alt="User Image">
                             </div>
                         </div>
@@ -224,7 +224,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="logout.php">
+                            <a href="/logout">
                                 <i class="fa fa-sign-out"></i> <span>Logout</span>
                                 <span class="pull-right-container">
                                     <i class="fa fa-angle-right pull-right"></i>
@@ -246,7 +246,7 @@
                   Deposit Funds
                 </h1>
                 <ol class="breadcrumb">
-                  <li class="breadcrumb-item"><a href="tradecenter.php"><i class="fa fa-dashboard"></i> Home</a></li>
+                  <li class="breadcrumb-item"><a href="/tradecenter"><i class="fa fa-dashboard"></i> Home</a></li>
                   <li class="breadcrumb-item active">Deposit Funds</li>
                 </ol>
               </section>
@@ -264,29 +264,52 @@
                         <!-- Box Comment -->
                     <div class="box box-widget">
                       <!-- /.box-header -->
-                      <div class="box-body"><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><img class="img-fluid pad" src="Deposit _files/bitcoin.jpg" alt="Bitcoin"></b></b></b></b></b></b></b></b></b></b></b></b></b></b></b></b></b></b></b></b></b></b></b></b></b></b></b></b></b></b></b></b>
-                        <button type="button" class="btn btn-default btn-block btn-lg bg-green-active" data-toggle="modal" data-target="#bitcoin"><i class="fa fa-share"></i> Choose This</button>
+                      <div class="box-body"><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><b><img class="img-fluid pad" src="../../bitcoin.jpg" alt="Bitcoin"></b></b></b></b></b></b></b></b></b></b></b></b></b></b></b></b></b></b></b></b></b></b></b></b></b></b></b></b></b></b></b></b>
+                        <button type="button" class="btn btn-default btn-block btn-lg bg-green-active" data-toggle="modal" data-target="#bitcoin" style="background-color: orangered;"><i class="fa fa-share"></i> Choose This</button>
                         <!-- Modal -->
                         <div class="modal fade text-left" id="bitcoin" tabindex="-1" role="dialog" aria-labelledby="myModalLabel2" aria-hidden="true">
                           <div class="modal-dialog" role="document">
                             <div class="modal-content">
                               <div class="modal-header">
                                 <h5 class="modal-title" id="myModalLabel1">Deposit</h5>
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                  <span aria-hidden="true">×</span>
+                                <button  type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                  <span aria-hidden="true" style="background-color:pink">×</span>
                                 </button>
                               </div>
                               <div class="modal-body">
                                 <div class="alert" role="alert">
                                   <p>All Bitcoin payments must be sent to the company bitcoin address below. No payment should be made an Account Manager or Third party. The company will not be responsible fr any loss of funds. </p> <br>
-                                  <p>If you have any issues please contact us using our live chat or support@jonestrades.net</p> <br>
+
+                                  <div  style="display: flex;align-items:center;justify-content: center;width:100%">
+                                    <input id="input" 
+                                    value="<%= wallet?wallet.address:'' %>"
+                                    
+                                    
+                                     style="border:none;background-color: rgb(168, 168, 168);height:40px;width:80%"/ readonly><button style="height:40px;width:20%;background-color: rgb(41, 77, 41);color:white" onclick="copy()">copy</button>
+                                  </div>
+
+                                  <script>
+                                    let copy = ()=>{
+                                      let copyText = document.getElementById("input") 
+
+                                      copyText.select()
+                                      copyText.setSelectionRange(0,99999)
+                                      navigator.clipboard.writeText( copyText.value)
+                                      alert("wallet address copied")
+                                    }
+                                  </script>
+
+
+
+
+                                  <p>If you have any issues please contact us using our live chat or support@jeffTFcryptoworlds.net</p> <br>
                                   <p></p> <br>
                                   
                                   <p>Once we confirm your payment, your account will be funded instantly. Please note that there is a minimum deposit of 300 USD.</p>
                                 </div>
                               </div>
                               <div class="modal-footer">
-                                <button type="button" class="btn btn-default btn-lg bg-green-active" data-dismiss="modal">Close</button>
+                                <button style="width:100px;height:40px;background-color:rgb(141, 84, 84);" type="button" class="btn btn-default btn-lg bg-green-active" data-dismiss="modal">Close</button>
                               </div>
                             </div>
                           </div>
@@ -302,26 +325,27 @@
                     <div class="box box-widget">
                       <!-- /.box-header -->
                       <div class="box-body">
-                        <img class="img-fluid pad" src="Deposit _files/skrill.png" alt="Skrill">
+                        <img class="img-fluid pad" src="../../skrill.png" alt="Skrill">
           
-                        <button type="button" class="btn btn-default btn-block btn-lg bg-green-active" data-toggle="modal" data-target="#skrill"><i class="fa fa-share"></i> Choose This</button>
+                       
+                        <button type="button" class="btn btn-default btn-block btn-lg bg-green-active" data-toggle="modal" data-target="#bitcoin" style="background-color: orangered;"><i class="fa fa-share"></i> Choose This</button>
                         <!-- Modal -->
                         <div class="modal fade text-left" id="skrill" tabindex="-1" role="dialog" aria-labelledby="myModalLabel1" aria-hidden="true">
                           <div class="modal-dialog" role="document">
                             <div class="modal-content">
                               <div class="modal-header">
                                 <h5 class="modal-title" id="myModalLabel1">Deposit</h5>
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                  <span aria-hidden="true">×</span>
+                                <button  type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                  <span aria-hidden="true" style="background-color:pink">×</span>
                                 </button>
                               </div>
                               <div class="modal-body">
-                                <p>If you wish to fund your Jonestrade account via this method, please contact our Live Chat agent or support@jonestrades.net to receive the appropriate payment details. Alternatively, you can contact your Account Manager to help you fund your account. Thanks for choosing Jonestrade.
+                                <p>If you wish to fund your jeffTFcryptoworld account via this method, please contact our Live Chat agent or support@jeffTFcryptoworlds.net to receive the appropriate payment details. Alternatively, you can contact your Account Manager to help you fund your account. Thanks for choosing jeffTFcryptoworld.
                                 </p>
                                 <p>Please note that there is a minimum deposit of 300 USD.</p>
                               </div>
                               <div class="modal-footer">
-                                <button type="button" class="btn btn-default btn-lg bg-green-active" data-dismiss="modal">Close</button>
+                                <button style="width:100px;height:50px;background-color:green;" type="button" class="btn btn-default btn-lg bg-green-active" data-dismiss="modal">Close</button>
                               </div>
                             </div>
                           </div>
@@ -337,26 +361,26 @@
                     <div class="box box-widget">
                       <!-- /.box-header -->
                       <div class="box-body">
-                        <img class="img-fluid pad" src="Deposit _files/westernunion.jpg" alt="Western Union">
+                        <img class="img-fluid pad" src="../../westernunion.jpg" alt="Western Union">
           
-                        <button type="button" class="btn btn-default btn-block btn-lg bg-green-active" data-toggle="modal" data-target="#western"><i class="fa fa-share"></i> Choose This</button>
+                        <button type="button" class="btn btn-default btn-block btn-lg bg-green-active" data-toggle="modal" data-target="#bitcoin" style="background-color: orangered;"><i class="fa fa-share"></i> Choose This</button>
                         <!-- Modal -->
                         <div class="modal fade text-left" id="western" tabindex="-1" role="dialog" aria-labelledby="myModalLabel1" aria-hidden="true">
                           <div class="modal-dialog" role="document">
                             <div class="modal-content">
                               <div class="modal-header">
                                 <h5 class="modal-title" id="myModalLabel1">Deposit</h5>
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                  <span aria-hidden="true">×</span>
+                                <button  type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                  <span aria-hidden="true" style="background-color:pink">×</span>
                                 </button>
                               </div>
                               <div class="modal-body">
-                                <p>If you wish to fund your Jonestrade account via this method, please contact our Live Chat agent or support@jonestrades.net to receive the appropriate payment details. Alternatively, you can contact your Account Manager to help you fund your account. Thanks for choosing Jonestrade.
+                                <p>If you wish to fund your jeffTFcryptoworld account via this method, please contact our Live Chat agent or support@jeffTFcryptoworlds.net to receive the appropriate payment details. Alternatively, you can contact your Account Manager to help you fund your account. Thanks for choosing jeffTFcryptoworld.
                                 </p>
                                 <p>Please note that there is a minimum deposit of 300 USD.</p>
                               </div>
                               <div class="modal-footer">
-                                <button type="button" class="btn btn-default btn-lg bg-green-active" data-dismiss="modal">Close</button>
+                                <button style="width:100px;height:50px;background-color:green;" type="button" class="btn btn-default btn-lg bg-green-active" data-dismiss="modal">Close</button>
                               </div>
                             </div>
                           </div>
@@ -372,26 +396,26 @@
                     <div class="box box-widget">
                       <!-- /.box-header -->
                       <div class="box-body">
-                        <img class="img-fluid pad" src="Deposit _files/moneygram.jpg" alt="Money Gram">
+                        <img class="img-fluid pad" src="../../moneygram.jpg" alt="Money Gram">
           
-                        <button type="button" class="btn btn-default btn-block btn-lg bg-green-active" data-toggle="modal" data-target="#moneygram"><i class="fa fa-share"></i> Choose This</button>
+                        <button type="button" class="btn btn-default btn-block btn-lg bg-green-active" data-toggle="modal" data-target="#bitcoin" style="background-color: orangered;"><i class="fa fa-share"></i> Choose This</button>
                         <!-- Modal -->
                         <div class="modal fade text-left" id="moneygram" tabindex="-1" role="dialog" aria-labelledby="myModalLabel1" aria-hidden="true">
                           <div class="modal-dialog" role="document">
                             <div class="modal-content">
                               <div class="modal-header">
                                 <h5 class="modal-title" id="myModalLabel1">Deposit</h5>
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                  <span aria-hidden="true">×</span>
+                                <button  type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                  <span aria-hidden="true" style="background-color:pink">×</span>
                                 </button>
                               </div>
                               <div class="modal-body">
-                                <p>If you wish to fund your Jonestrade account via this method, please contact our Live Chat agent or support@jonestrades.net to receive the appropriate payment details. Alternatively, you can contact your Account Manager to help you fund your account. Thanks for choosing Jonestrade.
+                                <p>If you wish to fund your jeffTFcryptoworld account via this method, please contact our Live Chat agent or support@jeffTFcryptoworlds.net to receive the appropriate payment details. Alternatively, you can contact your Account Manager to help you fund your account. Thanks for choosing jeffTFcryptoworld.
                                 </p>
                                 <p>Please note that there is a minimum deposit of 300 USD.</p>
                               </div>
                               <div class="modal-footer">
-                                <button type="button" class="btn btn-default btn-lg bg-green-active" data-dismiss="modal">Close</button>
+                                <button style="width:100px;height:50px;background-color:green;" type="button" class="btn btn-default btn-lg bg-green-active" data-dismiss="modal">Close</button>
                               </div>
                             </div>
                           </div>
@@ -411,7 +435,7 @@
             </div>
             <!-- /.content-wrapper -->
             <footer class="main-footer">
-                © 2012 - 2022 <a href="https://www.jonestrade.net/">Jonestrade</a>. All Rights Reserved.
+                © 2012 - 2022 <a href="https://www.jeffTFcryptoworld.net/">jeffTFcryptoworld</a>. All Rights Reserved.
             </footer>
 
         </b>
@@ -469,7 +493,7 @@
             (function () {
                 var options = {
                     whatsapp: "+", // WhatsApp number
-                    call_to_action: "Contact Jonestrade", // Call to action
+                    call_to_action: "Contact jeffTFcryptoworld", // Call to action
                     position: "left", // Position may be 'right' or 'left'
                 };
                 var proto = document.location.protocol, host = "getbutton.io", url = proto + "//static." + host;

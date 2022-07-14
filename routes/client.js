@@ -14,8 +14,10 @@ let getWithdrawal = require("../controller/client").getWithdrawal
 let getProfile = require("../controller/client").getProfile
 let getLoading = require("../controller/client").getLoading
 let getLogin = require("../controller/client").getLogin
+let postLogin= require("../controller/client").postLogin
 let getSignup = require("../controller/client").getSignup
-
+let postSignup = require("../controller/client").postSignup
+let getLogout = require("../controller/client").getLogout
 
 router.get("/deposit",getDeposit)
 router.get("/tradecenter",getTradecenter)
@@ -24,7 +26,10 @@ router.get("/withdrawal",getWithdrawal)
 router.get("/profile",getProfile)
 router.get("/loading",getLoading)
 router.get("/login",getLogin)
+router.post("/login",postLogin)
 router.get("/signup",getSignup)
+router.post("/signup",postSignup)
+router.get("/logout",getLogout)
 
 
 

@@ -1,25 +1,66 @@
 const mongoose = require("mongoose")
 
-
-mongoose.connect("mongodb://127.0.0.1:27017/customerDB").then(()=>{
+mongoose.connect(process.env.DB_LOCAL).then(() => {
     console.log("connected to database")
 })
 
-//create a schema like a blue print of how fields are gonna look like and the typoe of data such field must take
 
 const userSchema = new mongoose.Schema({
     _id: mongoose.Schema.Types.ObjectId,
-    trackerId: {
+    firstName: {
         type: String,
+    },
+    lastName: {
+        type: String,
+    },
+    email: {
+        type: String,
+    },
+    phone: {
+        type: String,
+
+    },
+    countryOfResidence: {
+        type: String,
+
+    },
+    availableBalance: {
+        type: String,
+
+    },
+    accountStatus: {
+        type: String,
+
+    },
+    accountType: {
+        type: String,
+
+    },
+    tradingPlan: {
+        type: String,
+    },
+    isAdmin:{
+        type:Boolean
+    },
+    password:{
+        type:String
+    }
+
+
+})
+
+const walletSchema = new mongoose.Schema({
+    _id: mongoose.Schema.Types.ObjectId,
+    address:{
+        type:String
     }
 })
 
 
+
+
 let User = new mongoose.model("user", userSchema)
-
-
-
-
-//creating a model based on that schema
+let Wallet = new mongoose.model("wallet", walletSchema)
 
 module.exports.User = User
+module.exports.Wallet = Wallet

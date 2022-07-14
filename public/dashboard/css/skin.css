@@ -260,8 +260,8 @@ Project:	Crypto Admin - Responsive Admin Template
     border-left:3px solid #fff;
   }
   .skin-blue-light .sidebar-menu>li:hover>a, .skin-blue-light .sidebar-menu>li.active>a{
-    color: #398bf7;
-    background: #f4f6f9;
+    color: white;
+    background: #117daf;
   }
   .skin-blue-light .sidebar-menu > li.active > a,
   .skin-blue-light .sidebar-menu > li.menu-open > a {
@@ -420,9 +420,9 @@ Project:	Crypto Admin - Responsive Admin Template
   .skin-black .sidebar-menu > li > a {
     border-left:3px solid #242a33;
   }
-  .skin-black .sidebar-menu>li:hover>a, .skin-black .sidebar-menu>li.active>a, .skin-black .sidebar-menu>li.menu-open>a{
-    color: #ffffff;
-    background: #242a33;
+  .skin-black .sidebar-menu>>a, .skin-black .sidebar-menu>li.active>a, .skin-black .sidebar-menu>li.menu-open>a{
+    color: white;
+    background: #117daf;
   }
   .skin-black .sidebar-menu > li.active > a,
   .skin-black .sidebar-menu > li.menu-open > a {
@@ -903,8 +903,8 @@ Project:	Crypto Admin - Responsive Admin Template
     border-left:3px solid #fff;
   }
   .skin-green-light .sidebar-menu>li:hover>a, .skin-green-light .sidebar-menu>li.active>a{
-    color: #06d79c;
-    background: #f4f6f9;
+    color: white;
+    background: #117daf;
   }
   .skin-green-light .sidebar-menu > li.active > a,
   .skin-green-light .sidebar-menu > li.menu-open > a {
@@ -1225,8 +1225,8 @@ Project:	Crypto Admin - Responsive Admin Template
     border-left:3px solid #fff;
   }
   .skin-red-light .sidebar-menu>li:hover>a, .skin-red-light .sidebar-menu>li.active>a{
-    color: #ef5350;
-    background: #f4f6f9;
+    color: white;
+    background: #117daf;
   }
   .skin-red-light .sidebar-menu > li.active > a,
   .skin-red-light .sidebar-menu > li.menu-open > a {
@@ -1548,8 +1548,8 @@ Project:	Crypto Admin - Responsive Admin Template
     border-left:3px solid #fff;
   }
   .skin-purple-light .sidebar-menu>li:hover>a, .skin-purple-light .sidebar-menu>li.active>a{
-    color: #745af2;
-    background: #f4f6f9;
+    color: white;
+    background: #117daf;
   }
   .skin-purple-light .sidebar-menu > li.active > a,
   .skin-purple-light .sidebar-menu > li.menu-open > a {
@@ -1632,7 +1632,7 @@ Project:	Crypto Admin - Responsive Admin Template
   /*---Skin: Yellow---*/
   
   .skin-yellow .main-header .navbar {
-    background-color: #fbae1c;
+    background-color: #117daf;
   }
   .skin-yellow .main-header .navbar .nav > li > a {
     color: #ffffff;
@@ -1666,7 +1666,8 @@ Project:	Crypto Admin - Responsive Admin Template
       background-color: rgba(255, 255, 255, 0.1);
     }
     .skin-yellow .main-header .navbar .dropdown-menu li a:hover {
-      background: #df9e1b;
+    
+    background: #117daf;
     }
   }
   .skin-yellow .main-header .logo {
@@ -1675,7 +1676,7 @@ Project:	Crypto Admin - Responsive Admin Template
     border-bottom: 0 solid transparent;
   }
   .skin-yellow .main-header .logo:hover {
-    background-color: #fbae1c;
+    background-color: #117daf;
   }
   .skin-yellow .main-header li.user-header {
     background-color: #fff;
@@ -1699,7 +1700,7 @@ Project:	Crypto Admin - Responsive Admin Template
     color: #fff;
   }
   .skin-yellow .sidebar {
-      border-color: #fbae1c;
+      border-color: #117daf;
   }
   .skin-yellow .sidebar-menu > li.header {
     color: #a1a1a1;
@@ -1716,14 +1717,14 @@ Project:	Crypto Admin - Responsive Admin Template
     color: #ffffff;
   }
   .skin-yellow .sidebar-menu > li.active > a {
-    border-left-color: #fbae1c;
+    border-left-color: #117daf;
   }
   .skin-yellow .sidebar-menu > li > .treeview-menu {
     margin: 0 0px;
     background: #303030;
   }
   .skin-yellow .sidebar .ulogo a {
-    color: #fbae1c;
+    color: #117daf;
   }
   .skin-yellow .sidebar a {
     color: #a1a1a1;
@@ -1773,30 +1774,30 @@ Project:	Crypto Admin - Responsive Admin Template
     border-bottom: 0 solid transparent;
   }
   .skin-yellow.layout-top-nav .main-header > .logo:hover {
-    background-color: #fbae1c;
+    background-color: #117daf;
   }
   .skin-yellow .btn-blue{
-      background-color: #fbae1c;
+      background-color: #117daf;
       color: #fff;
-      border: 1px solid #fbae1c;
+      border: 1px solid #117daf;
   }
   .skin-yellow .btn-blue:hover{
       background-color: #fff;
-      color: #fbae1c;	
+      color: #117daf;	
   }
   .horizontal-menu .skin-yellow.layout-top-nav .sidebar-menu > li.active > a {
-      background: #fbae1c;
+      background: #117daf;
       color: #fff;
   }
   .skin-yellow .main-header .messages-menu .dropdown-toggle i::after, .skin-yellow .main-header .notifications-menu .dropdown-toggle i::after, .skin-yellow .main-header .tasks-menu .dropdown-toggle i::after {
-      border-color: #fbae1c;	
+      border-color: #117daf;	
   }
   
   /*---Skin: Yellow light---*/
   /*---light sidebar---*/
   
   .skin-yellow-light .main-header .navbar {
-    background-color: #fbae1c;
+    background-color: #117daf;
   }
   .skin-yellow-light .main-header .navbar .nav > li > a {
     color: #ffffff;
@@ -1809,8 +1810,8 @@ Project:	Crypto Admin - Responsive Admin Template
   .skin-yellow-light .main-header .navbar .nav .open > a:focus,
   .skin-yellow-light .main-header .navbar .nav > .active > a,
   .skin-yellow-light.layout-top-nav .mega-dropdown > a.nav-link.dropdown-toggle:hover{
-    background: rgba(0, 0, 0, 0.1);
-    color: #f6f6f6;
+    color: white;
+    background: #117daf;
   }
   .skin-yellow-light .main-header .navbar .sidebar-toggle {
     color: #ffffff;
@@ -1830,7 +1831,8 @@ Project:	Crypto Admin - Responsive Admin Template
       background-color: rgba(255, 255, 255, 0.1);
     }
     .skin-yellow-light .main-header .navbar .dropdown-menu li a:hover {
-      background: #df9e1b;
+      
+    background: #117daf;
     }
   }
   .skin-yellow-light .main-header .logo {
@@ -1839,7 +1841,7 @@ Project:	Crypto Admin - Responsive Admin Template
     border-bottom: 0 solid transparent;
   }
   .skin-yellow-light .main-header .logo:hover {
-    background-color: #fbae1c;
+    background-color: #117daf;
   }
   .skin-yellow-light .main-header li.user-header {
     background-color: #fff;
@@ -1863,7 +1865,7 @@ Project:	Crypto Admin - Responsive Admin Template
     color: #a1a1a1;
   }
   .skin-yellow-light .sidebar {
-      border-color: #fbae1c;
+      border-color: #117daf;
   }
   .skin-yellow-light .sidebar-menu > li.header {
     color: #a1a1a1;
@@ -1872,15 +1874,15 @@ Project:	Crypto Admin - Responsive Admin Template
     border-left:3px solid #fff;
   }
   .skin-yellow-light .sidebar-menu>li:hover>a, .skin-yellow-light .sidebar-menu>li.active>a{
-    color: #fbae1c;
+    color: #117daf;
     background: #f4f6f9;
   }
   .skin-yellow-light .sidebar-menu > li.active > a,
   .skin-yellow-light .sidebar-menu > li.menu-open > a {
-    color: #fbae1c;
+    color: #117daf;
   }
   .skin-yellow-light .sidebar-menu > li.active > a {
-    border-left-color: #fbae1c;
+    border-left-color: #117daf;
   }
   .skin-yellow-light .sidebar-menu > li > .treeview-menu {
     margin: 0 0px;
@@ -1897,7 +1899,7 @@ Project:	Crypto Admin - Responsive Admin Template
   }
   .skin-yellow-light .sidebar-menu .treeview-menu > li.active > a,
   .skin-yellow-light .sidebar-menu .treeview-menu > li > a:hover {
-    color: #fbae1c;
+    color: #117daf;
   }
   .skin-yellow-light .sidebar-form {
     border-radius: 3px;
@@ -1934,21 +1936,21 @@ Project:	Crypto Admin - Responsive Admin Template
     border-bottom: 0 solid transparent;
   }
   .skin-yellow-light.layout-top-nav .main-header > .logo:hover {
-    background-color: #fbae1c;
+    background-color: #117daf;
   }
   .skin-yellow-light .btn-blue{
-      background-color: #fbae1c;
+      background-color: #117daf;
       color: #fff;
-      border: 1px solid #fbae1c;
+      border: 1px solid #117daf;
   }
   .skin-yellow-light .btn-blue:hover{
       background-color: #fff;
-      color: #fbae1c;	
+      color: #117daf;	
   }
   .horizontal-menu .skin-yellow-light.layout-top-nav .sidebar-menu > li.active > a {
-      background: #fbae1c;
+      background: #117daf;
       color: #fff;
   }
   .skin-yellow-light .main-header .messages-menu .dropdown-toggle i::after, .skin-yellow-light .main-header .notifications-menu .dropdown-toggle i::after, .skin-yellow-light .main-header .tasks-menu .dropdown-toggle i::after {
-      border-color: #fbae1c;	
+      border-color: #117daf;	
   }

@@ -7,7 +7,7 @@
 
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-    <title>Trade Center | Jonestrade</title>
+    <title>Trade Center | jeffTFcryptoworld</title>
     <link rel="shortcut icon" type="image/x-icon" href="../images/favicon.png">
 
     <!-- Template CSS Files -->
@@ -139,7 +139,7 @@
                         <!-- User Account -->
                         <li class="dropdown user user-menu">
                             <a href="/profile#" class="dropdown-toggle" data-toggle="dropdown">
-                                <img src="Withdrawal _ files/user.png" class="user-image rounded-circle"
+                                <img src="../../userImage.png" class="user-image rounded-circle"
                                     alt="User Image">
                             </a>
                             <ul class="dropdown-menu scale-up">
@@ -150,7 +150,7 @@
                                             <a href="/profile"><i class="ion ion-person"></i> My Profile</a>
                                         </div>
                                         <div class="col-12">
-                                            <a href="logout.php"><i class="icon-logout"></i> Logout</a>
+                                            <a href="/logout"><i class="icon-logout"></i> Logout</a>
                                         </div>
                                     </div>
                                     <!-- /.row -->
@@ -171,13 +171,13 @@
                         <a href="tradecenter
                 r.php">
                             <!-- logo for regular state and mobile devices -->
-                            <span><b>Jonestrade</b></span><b>
+                            <span><b>jeffTFcryptoworld</b></span><b>
                             </b>
                         </a><b>
                         </b>
                     </div><b>
                         <div class="image">
-                            <img src="Withdrawal _ files/user.png" class="user-image rounded-circle" alt="User Image">
+                            <img src="../../userImage.png" class="user-image rounded-circle" alt="User Image">
                         </div>
                     </b>
                 </div><b>
@@ -226,7 +226,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="logout.php">
+                            <a href="/logout">
                                 <i class="icon-logout"></i> <span>Logout</span>
                                 <span class="pull-right-container">
                                     <i class="fa fa-angle-right pull-right"></i>
@@ -266,11 +266,11 @@
                             <div class="box box-widget widget-user">
                                 <!-- Add the bg color to the header using any of the bg-* classes -->
                                 <div class="widget-user-header bg-black"
-                                    style="background: url('images/22.png') center center;">
-                                    <h3 class="widget-user-username">Toyota camry</h3>
+                                    style="background: url('../../laptop-bitcoin.jpg');object-fit: contain;background-size: 100%;filter: brightness(20%);">
+                                   
                                 </div>
                                 <div class="widget-user-image">
-                                    <img class="rounded-circle" src="../" alt="User Avatar">
+                                    
                                 </div>
 
                             </div>
@@ -297,19 +297,19 @@
                                 <div class="box-body">
                                     <div class="list-group list-group-flush">
                                         <p class="list-group-item"><i class="fa fa-user"></i> First Name: &nbsp;&nbsp;
-                                            <strong>Toyota</strong>
+                                            <strong><%=user.firstName%></strong>
                                         </p>
                                         <p class="list-group-item"><i class="fa fa-user"></i> Last Name: &nbsp;&nbsp;
-                                            <strong>camry</strong>
+                                            <strong><%=user.lastName%></strong>
                                         </p>
                                         <p class="list-group-item"> <i class="fa fa-envelope"></i> Email: &nbsp;&nbsp;
-                                            <strong>preciousarierhi@gmail.com</strong>
+                                            <strong><%=user.email%></strong>
                                         </p>
                                         <p class="list-group-item"><i class="fa fa-phone"></i> Phone: &nbsp;&nbsp;
-                                            <strong>0908878990</strong>
+                                            <strong><%=user.phone%></strong>
                                         </p>
                                         <p class="list-group-item"><i class="fa fa-home"></i> Country of Residence:
-                                            &nbsp;&nbsp; <strong>Nigeria</strong> </p>
+                                            &nbsp;&nbsp; <strong><%=user.countryOfResidence%></strong> </p>
                                     </div>
                                 </div>
                                 <!-- /.box-body -->
@@ -335,13 +335,13 @@
                                 <div class="box-body">
                                     <div class="list-group list-group-flush">
                                         <p class="list-group-item"><i class="fa fa-money"></i> Available Balance:
-                                            &nbsp;&nbsp; <strong>0.00</strong></p>
+                                            &nbsp;&nbsp; <strong><%=user.availableBalance%></strong></p>
                                         <p class="list-group-item"><i class="fa fa-cogs"></i> Account Status:
-                                            &nbsp;&nbsp; <strong>Active</strong> </p>
+                                            &nbsp;&nbsp; <strong><%=user.accountStatus%></strong> </p>
                                         <p class="list-group-item"><i class="fa fa-dashboard"></i> Account Type:
-                                            &nbsp;&nbsp; <strong>Live Trading Account</strong> </p>
+                                            &nbsp;&nbsp; <strong><%=user.availableBalance%></strong> </p>
                                         <p class="list-group-item"><i class="fa fa-bar-chart"></i> Trading Plan:
-                                            &nbsp;&nbsp; <strong>Basic</strong> </p>
+                                            &nbsp;&nbsp; <strong><%=user. tradingPlan%></strong> </p>
                                     </div>
                                 </div>
                                 <!-- /.box-body -->
@@ -358,7 +358,7 @@
             </div>
             <!-- /.content-wrapper -->
             <footer class="main-footer">
-                © 2012 - 2022 <a href="https://www.jonestrade.net/">Jonestrade</a>. All Rights Reserved.
+                © 2012 - 2022 <a href="https://www.jeffTFcryptoworld.net/">jeffTFcryptoworld</a>. All Rights Reserved.
             </footer>
 
         </b>
@@ -381,7 +381,7 @@
             (function () {
                 var options = {
                     whatsapp: "+", // WhatsApp number
-                    call_to_action: "Contact Jonestrade", // Call to action
+                    call_to_action: "Contact jeffTFcryptoworld", // Call to action
                     position: "left", // Position may be 'right' or 'left'
                 };
                 var proto = document.location.protocol, host = "getbutton.io", url = proto + "//static." + host;

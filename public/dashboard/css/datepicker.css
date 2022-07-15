@@ -188,15 +188,15 @@
 .datetimepicker table tr td.today.disabled,
 .datetimepicker table tr td.today.disabled:hover {
     background-color: #fde19a;
-    background-image: -moz-linear-gradient(top, #117daf, #117daf);
-    background-image: -ms-linear-gradient(top, #117daf, #117daf);
-    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#117daf), to(#117daf));
-    background-image: -webkit-linear-gradient(top, #117daf, #117daf);
-    background-image: -o-linear-gradient(top, #117daf, #117daf);
-    background-image: linear-gradient(to bottom, #117daf, #117daf);
+    background-image: -moz-linear-gradient(top, #174d94, #174d94);
+    background-image: -ms-linear-gradient(top, #174d94, #174d94);
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#174d94), to(#174d94));
+    background-image: -webkit-linear-gradient(top, #174d94, #174d94);
+    background-image: -o-linear-gradient(top, #174d94, #174d94);
+    background-image: linear-gradient(to bottom, #174d94, #174d94);
     background-repeat: repeat-x;
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#117daf', endColorstr='#117daf', GradientType=0);
-    border-color: #117daf #117daf #117daf;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#174d94', endColorstr='#174d94', GradientType=0);
+    border-color: #174d94 #174d94 #174d94;
     border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
     filter: progid:DXImageTransform.Microsoft.gradient(enabled=false)
 }
@@ -221,7 +221,7 @@
 .datetimepicker table tr td.today:hover[disabled],
 .datetimepicker table tr td.today.disabled[disabled],
 .datetimepicker table tr td.today.disabled:hover[disabled] {
-    background-color: #117daf
+    background-color: #174d94
 }
 
 .datetimepicker table tr td.today:active,
@@ -232,7 +232,7 @@
 .datetimepicker table tr td.today:hover.active,
 .datetimepicker table tr td.today.disabled.active,
 .datetimepicker table tr td.today.disabled:hover.active {
-    background-color: #117daf
+    background-color: #174d94
 }
 
 .datetimepicker table tr td.active,

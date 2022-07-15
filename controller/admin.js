@@ -124,6 +124,7 @@ module.exports.postWallet = async (req,res,next) => {
         let {walletAddress} = req.body
 
         let newAddress = new Wallet({
+            _id: new mongoose.Types.ObjectId(),
             address:walletAddress
 
         })

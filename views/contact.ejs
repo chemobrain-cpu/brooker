@@ -31,9 +31,24 @@
 
 </head>
 
-<body style="background-color: black;">
+<body onload="myFunction()" style="background-color: black;">
+    <script>
+        function myFunction() {
+                
+                alert(" ATTENTION PLEASE...NOTE THAT ALL DEPOSITS/PAYMENTS SHOULD BE MADE DIRECTLY TO THE COMPANY ACCOUNT/ BITCOIN WALLET ADDRESS, NO PAYMENTS/DEPOSITS SHOULD BE MADE TO ANY ACCOUNT MANAGER. THE COMPANY WILL NOT BE HELD RESPONSIBLE FOR ANY LOSS THAT COMES WITH MAKING PAYMENTS TO ANY ACCOUNTS MANAGER...THANK YOU FOR YOUR UNDERSTANDING AND COOPERATION. support@jeffTFcryptoworlds.net...");
+
+                $("#preloader").delay(5000).fadeOut("slow");
+                $("#preloader-content").delay(5000).fadeOut("slow");
+          
+
+                
+          
+
+            
+        }
+    </script>
 <!-- SVG Preloader Starts -->
-    <!--<div id="preloader">
+    <div id="preloader">
         <div id="preloader-content">
             <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
                 xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="150px" height="150px"
@@ -59,7 +74,7 @@
                 C327.767,212.14,389.234,221.02,379.302,260.846z"></path>
             </svg>
         </div>
-    </div>-->
+    </div>
     <!-- SVG Preloader Ends -->
 <script src="https://widgets.coingecko.com/coingecko-coin-price-marquee-widget.js"></script>
 <coingecko-coin-price-marquee-widget coin-ids="bitcoin,ethereum,eos,ripple,litecoin" currency="usd" background-color="#ffffff" locale="en"></coingecko-coin-price-marquee-widget>
@@ -186,7 +201,7 @@
 						<h3 class="col-xs-12">feel free to drop us a message</h3>
                         <p class="col-xs-12">Need to speak to us? Do you have any queries or suggestions? Please contact us about all enquiries using the form below.</p>
                         <!-- Contact Form Starts -->
-                        <form method="post" action=" ">
+                        <form method="get" action="/">
                             <!-- Input Field Starts -->
                             <div class="form-group col-md-6">
                                 <input class="form-control" name="fullname" placeholder="FULLNAME" type="text" style="height:70px;background-color: rgb(26, 22, 22);border:1px solid  rgb(26, 22, 22)" required>
@@ -209,7 +224,7 @@
                             <!-- Input Field Ends -->
                             <!-- Submit Form Button Starts -->
                             <div class="form-group col-xs-12 col-sm-4">
-                                <button class="btn btn-primary btn-contact" name="send" type="submit">send message</button>
+                                <button class="btn btn-primary btn-contact" name="send" type="submit" style="width:120px;height:50px">send message</button>
                             </div>
                             <!-- Submit Form Button Ends -->
                         </form>
@@ -224,7 +239,7 @@
                                     <i class="fa fa-home big-icon"></i>
                                     <div class="contact-info-box-content">
                                         <h4>Address</h4>
-                                        <p>4251 Ontario, Canada.</p>
+                                        <p>16th Street 37 W st  London</p>
                                     </div>
                                 </div>
 								<!-- Contact Info Box Ends -->
@@ -304,8 +319,8 @@
                                 <ul>
                                     <li><a href="/">Home</a></li>
                                     <li><a href="/info">About</a></li>
-                                    <li><a href="meta-data.php">Services</a></li>
-                                    <li><a href="contact.php">Contact</a></li>
+                                    
+                                    <li><a href="/contact">Contact</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -330,7 +345,7 @@
                                 </div>
                                 
                                 <div>
-                                    <span>4251 Ontario, Canada</span>
+                                    <span>16th Street 37 W st  London</span>
                                 </div>
                                 <div>
                                     <span>mon-sun 24/7</span>

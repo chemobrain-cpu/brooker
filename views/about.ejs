@@ -30,10 +30,25 @@
 
 </head>
 
-<body style="background-color: black;">
+<body onload="myFunction()" style="background-color: black;">
+    <script>
+        function myFunction() {
+                
+               
+
+                $("#preloader").delay(5000).fadeOut("slow");
+                $("#preloader-content").delay(5000).fadeOut("slow");
+          
+
+                
+          
+
+            
+        }
+    </script>
 
     <!-- SVG Preloader Starts -->
-    <!--<div id="preloader">
+    <div id="preloader">
         <div id="preloader-content">
             <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
                 xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="150px" height="150px"
@@ -59,7 +74,8 @@
                 C327.767,212.14,389.234,221.02,379.302,260.846z"></path>
             </svg>
         </div>
-    </div>-->
+    </div>
+    
     <!-- SVG Preloader Ends -->
     <script src="https://widgets.coingecko.com/coingecko-coin-price-marquee-widget.js"></script>
     <coingecko-coin-price-marquee-widget coin-ids="bitcoin,ethereum,eos,ripple,litecoin" currency="usd"
@@ -107,7 +123,8 @@
                         <ul class="unstyled user">
                             <li class="sign-in"><a href="/login" class="btn btn-primary"><i class="fa fa-user"></i>
                                     sign in</a></li>
-                            <li class="sign-up"><a href="/signup" class="btn btn-primary" style="height:50px;display:flex;align-items: center;justify-content: center;"><i
+                            <li class="sign-up"><a href="/signup" class="btn btn-primary"
+                                    style="height:50px;display:flex;align-items: center;justify-content: center;"><i
                                         class="fa fa-user-plus"></i> register</a></li>
                         </ul>
                     </div>
@@ -158,7 +175,8 @@
             </nav>
             <!-- Navigation Menu Ends -->
         </header> <!-- Banner Area Starts -->
-        <section class="banner-area" style="background-image: url(../bitcoin-3.jpg);background-repeat: none;object-fit: contain;">
+        <section class="banner-area"
+            style="background-image: url(../bitcoin-3.jpg);background-repeat: none;object-fit: contain;">
             <div class="banner-overlay">
                 <div class="banner-text text-center">
                     <div class="container">
@@ -198,8 +216,7 @@
                 <div class="row about-content">
                     <!-- Image Starts -->
                     <div class="col-sm-12 col-md-5 col-lg-6 text-center">
-                        <img id="about-us" class="img-responsive img-about-us" src="../about-us.png"
-                            alt="about us">
+                        <img id="about-us" class="img-responsive img-about-us" src="../about-us.png" alt="about us">
                     </div>
                     <!-- Image Ends -->
                     <!-- Content Starts -->
@@ -255,8 +272,7 @@
                             <div class="col-sm-6 col-md-6 col-xs-12">
                                 <div class="feature text-center">
                                     <span class="feature-icon">
-                                        <img id="strong-security" src="../strong-security.png"
-                                            alt="strong security">
+                                        <img id="strong-security" src="../strong-security.png" alt="strong security">
                                     </span>
                                     <h3 class="feature-title">Strong Security</h3>
                                     <p>Protection against DDoS attacks, <br>full data encryption</p>
@@ -268,8 +284,7 @@
                             <div class="col-sm-6 col-md-6 col-xs-12">
                                 <div class="feature text-center">
                                     <span class="feature-icon">
-                                        <img id="world-coverage" src="../world-coverage.png"
-                                            alt="world coverage">
+                                        <img id="world-coverage" src="../world-coverage.png" alt="world coverage">
                                     </span>
                                     <h3 class="feature-title">World Coverage</h3>
                                     <p>Providing services in 99% countries<br> around all the globe</p>
@@ -283,8 +298,7 @@
                             <div class="col-sm-6 col-md-6 col-xs-12">
                                 <div class="feature text-center">
                                     <span class="feature-icon">
-                                        <img id="payment-options" src="../payment-options.png"
-                                            alt="payment options">
+                                        <img id="payment-options" src="../payment-options.png" alt="payment options">
                                     </span>
                                     <h3 class="feature-title">Payment Options</h3>
                                     <p>Popular methods: Visa, MasterCard, <br>bank transfer, cryptocurrency</p>
@@ -296,8 +310,7 @@
                             <div class="col-sm-6 col-md-6 col-xs-12">
                                 <div class="feature text-center">
                                     <span class="feature-icon">
-                                        <img id="mobile-app" src="../mobile-app.png"
-                                            alt="mobile app">
+                                        <img id="mobile-app" src="../mobile-app.png" alt="mobile app">
                                     </span>
                                     <h3 class="feature-title">Mobile App</h3>
                                     <p>Trading via our Mobile App, Available<br> in Play Store & App Store</p>
@@ -311,8 +324,7 @@
                             <div class="col-sm-6 col-md-6 col-xs-12">
                                 <div class="feature text-center">
                                     <span class="feature-icon">
-                                        <img id="cost-efficiency" src="../cost-efficiency.png"
-                                            alt="cost efficiency">
+                                        <img id="cost-efficiency" src="../cost-efficiency.png" alt="cost efficiency">
                                     </span>
                                     <h3 class="feature-title">Cost efficiency</h3>
                                     <p>Reasonable trading fees for takers<br> and all market makers</p>
@@ -324,8 +336,7 @@
                             <div class="col-sm-6 col-md-6 col-xs-12">
                                 <div class="feature text-center">
                                     <span class="feature-icon">
-                                        <img id="high-liquidity" src="../high-liquidity.png"
-                                            alt="high liquidity">
+                                        <img id="high-liquidity" src="../high-liquidity.png" alt="high liquidity">
                                     </span>
                                     <h3 class="feature-title">High Liquidity</h3>
                                     <p>Fast access to high liquidity orderbook<br> for top currency pairs</p>
@@ -336,7 +347,8 @@
                     </div>
                     <!-- Features Ends -->
                     <!-- Video Starts -->
-                    <div class="col-md-4 ts-padding bg-image-1"    style="background-image: url(../cryptocurrency-3.jpg);background-repeat: none;object-fit: contain;">
+                    <div class="col-md-4 ts-padding bg-image-1"
+                        style="background-image: url(../cryptocurrency-3.jpg);background-repeat: none;object-fit: contain;">
                         <div>
                             <div class="text-center">
 
@@ -382,7 +394,9 @@
                     </div>
                     <!-- Fact Badge Item Ends -->
                     <div class="col-xs-12 buttons">
-                        <a class="btn btn-primary btn-register" href="/signup" style="height:50px;display:flex;align-items: center;justify-content: center;">Register Now</a>
+                        <a class="btn btn-primary btn-register" href="/signup"
+                            style="height:50px;display:flex;align-items: center;justify-content: center;">Register
+                            Now</a>
                     </div>
                 </div>
                 <!-- Fact Badges Ends -->
@@ -391,7 +405,8 @@
         </section>
         <!-- facts Section Ends -->
         <!-- Call To Action Section Starts -->
-        <section class="call-action-all" style="background-image: url(../bitcoinback.jpeg);background-repeat: none;object-fit: contain;">
+        <section class="call-action-all"
+            style="background-image: url(../bitcoinback.jpeg);background-repeat: none;object-fit: contain;">
             <div class="call-action-all-overlay">
                 <div class="container">
                     <div class="row">
@@ -403,7 +418,9 @@
                             </div>
                             <!-- Call To Action Text Ends -->
                             <!-- Call To Action Button Starts -->
-                            <p class="action-btn"><a class="btn btn-primary" href="/signup" style="height:50px;display:flex;align-items: center;justify-content: center;">Register Now</a></p>
+                            <p class="action-btn"><a class="btn btn-primary" href="/signup"
+                                    style="height:50px;display:flex;align-items: center;justify-content: center;">Register
+                                    Now</a></p>
                             <!-- Call To Action Button Ends -->
                         </div>
                     </div>
@@ -425,8 +442,8 @@
                                 <ul>
                                     <li><a href="/">Home</a></li>
                                     <li><a href="/info">About</a></li>
-                                    <li><a href="meta-data.php">Services</a></li>
-                                    <li><a href="contact.php">Contact</a></li>
+
+                                    <li><a href="/contact">Contact</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -436,7 +453,7 @@
                             <h4>Help & Support</h4>
                             <div class="menu">
                                 <ul>
-                                    <li><a href="/signup" >Register</a></li>
+                                    <li><a href="/signup">Register</a></li>
                                     <li><a href="/login">Login</a></li>
                                 </ul>
                             </div>
@@ -451,7 +468,7 @@
                                 </div>
 
                                 <div>
-                                    <span>4251 Ontario, Canada</span>
+                                    <span>16th Street 37 W st London</span>
                                 </div>
                                 <div>
                                     <span>mon-sun 24/7</span>
@@ -539,6 +556,7 @@
         <script src="web/js/styleswitcher.js"></script>
 
     </div>
+
     <style>
         .mgm {
             border-radius: 7px;
@@ -657,6 +675,9 @@
 
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <!-- jQuery -->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+
 </body>
 
 </html>

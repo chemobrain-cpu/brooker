@@ -48,7 +48,11 @@ app.use((err,req,res,next)=>{
     err.message = err.message || "an error occured on the server"
     res.status(err.statusCode).render("error",{message:"an error occured try later"})
 })
+app.use("*",(req,res,next)=>{
+    res.render("home")
 
+
+})
 
 
 app.listen(process.env.PORT||3005,(err)=>{

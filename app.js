@@ -29,7 +29,14 @@ app.use(session({
 app.set("view engine","ejs")
 app.use(bodyParser.urlencoded({extended:true}))
 
-
+app.use(function(req,res,next){
+    if(req.path.substr(-1) == '/' && req.path.length > 1){
+        const query = req.url.slice(req.path.length);
+        res.redirect(req.path.slice(0,-1) + query)
+    }else{
+        next()
+    }
+})
 
 const pageRoutes = require("./routes/pages")
 const clientRoutes = require("./routes/client")

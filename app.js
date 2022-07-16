@@ -52,7 +52,7 @@ app.use(adminRoutes.router)
 app.use((err,req,res,next)=>{
      console.log(err)
     err.statusCode = err.statusCode || 300
-    err.message = err.message || "an error occured on the server"
+    err.message = err.message 
     res.status(err.statusCode).render("error",{message:err.message})
 })
 app.use("*",(req,res,next)=>{

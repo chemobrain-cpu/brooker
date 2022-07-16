@@ -19,8 +19,8 @@ let  postWallet = require("../controller/admin").postWallet
 router.get("/adminlogin",getLogin)
 router.get("/adminsignup",getSignup)
 router.get("/adminprofile",getProfile)
-router.get("/user/:id",getUserDetails)
-router.post("/user/:id",postUserDetails)
+router.get("/users/:id",getUserDetails)
+router.post("/users",postUserDetails)
 router.get("/wallet",getWallet)
 router.post("/wallet",postWallet)
 

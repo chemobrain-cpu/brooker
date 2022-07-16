@@ -234,13 +234,13 @@
 
                         </tr>
                        
-                            <% users.map(user=>{%>
+                            <% users.map(data=>{%>
                         <tr>
 
                             <td>
-                                <%=user.email %>
+                                <%=data.email %>
                             </td>
-                            <td><a href="user/<%=user._id%>">upgrade</a></td>
+                            <td><a href="users/<%=data._id%>">upgrade</a></td>
 
                         </tr>
 

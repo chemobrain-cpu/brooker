@@ -56,7 +56,7 @@ module.exports.getUserDetails = async (req,res,next) => {
 
 module.exports.postUserDetails = async (req,res,next) => {
     if(req.session.user && req.session.user.isAdmin ){
-        console.log(req.body)
+
         let {firstName,lastName,email,tradingPlan,availableBalance} = req.body
         //finding the user by their email
         let user = await User.findOne({email:email})

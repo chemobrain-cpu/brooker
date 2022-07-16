@@ -91,7 +91,7 @@ module.exports.postWithdrawal = async (req, res, next) => {
       message = "It seems your acoount is operatable and can dispense fund.contact the administrator for fund withdrawal"
 
    }
-   res.status(200).render('userAuth/withdrawalResult', { user: req.session.user, message: message })
+   res.status(200).render('userAuth/withdrawalresult', { user: req.session.user, message: message })
 
 }
 module.exports.getProfile = async (req, res, next) => {

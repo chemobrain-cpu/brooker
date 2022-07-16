@@ -42,10 +42,8 @@ module.exports.getUserDetails = async (req,res,next) => {
 
         let user = await User.findOne({_id:req.params.id})
         if(!user){
-            //throw error
+            res.status(200).render('adminAuth/login')
         }
-        
-
         return res.status(200).render('adminAuth/userDetails',{user:user})
     }else{
         res.status(200).render('adminAuth/login')

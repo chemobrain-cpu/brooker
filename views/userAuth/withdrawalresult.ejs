@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" style="height: auto; min-height: 100%;">
 
-
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
@@ -114,16 +113,16 @@
     </style>
 </head>
 
-<body class="skin-yellow sidebar-mini" style="height: auto; min-height: 100%;">
+<body class="skin-yellow sidebar-mini" style="height: auto; min-height: 100%;background-color: black;">
     <div class="wrapper" style="height: auto; min-height: 100%;">
 
         <header class="main-header">
             <!-- Logo -->
-            <a href="/tradecenter" class="logo">
+            <a href="/" class="logo">
                 <!-- logo for regular state and mobile devices -->
                 <span class="logo-lg">
-                    <img src="Profile _ files/logo-light-text.png" alt="logo" class="light-logo">
-                    <img src="Profile _ files/logo-dark-text.png" alt="logo" class="dark-logo">
+                    <img src="Trade Center _files/logo-light-text.png" alt="logo" class="light-logo">
+                    <img src="Trade Center _files/logo-dark-text.png" alt="logo" class="dark-logo">
                 </span>
             </a>
             <!-- Header Navbar -->
@@ -167,8 +166,7 @@
                 <!-- Sidebar user panel -->
                 <div class="user-panel">
                     <div class="ulogo">
-                        <a href="/tradecenter
-                r">
+                        <a href="../../tradecenter">
                             <!-- logo for regular state and mobile devices -->
                               <span style="color:grey"><b>jeffTFcryptoworld</b></span><b></b>
                             </b>
@@ -176,35 +174,58 @@
                         </b>
                     </div><b>
                         <div class="image">
-                            <img src="../../userImage.png" class="user-image rounded-circle" alt="User Image">
+                            <div align="center"><img src="../../userImage.png" class="user-image rounded-circle"
+                                    alt="User Image">
+                            </div>
                         </div>
                     </b>
                 </div><b>
                     <!-- sidebar menu -->
                     <ul class="sidebar-menu tree" data-widget="tree">
                         <li class="nav-devider"></li>
-
-                        <li class="">
-                            <a href="/adminprofile">
-                                <span>profile</span>
+                        <li class="active">
+                            <a href="../../tradecenter">
+                                <i class="fa fa-bar-chart"></i> <span>Trade Center</span>
                                 <span class="pull-right-container">
                                     <i class="fa fa-angle-right pull-right"></i>
                                 </span>
                             </a>
                         </li>
-                        <li class="nav-devider"></li>
                         <li class="">
-                            <a href="/adminusers">
-                                <span>users</span>
+                            <a href="/profile">
+                                <i class="fa fa-user"></i> <span>Profile</span>
                                 <span class="pull-right-container">
                                     <i class="fa fa-angle-right pull-right"></i>
                                 </span>
                             </a>
                         </li>
-                        <li class="nav-devider"></li>
+                        <li class="">
+                            <a href="/deposit">
+                                <i class="fa fa-btc"></i> <span>Deposit</span>
+                                <span class="pull-right-container">
+                                    <i class="fa fa-angle-right pull-right"></i>
+                                </span>
+                            </a>
+                        </li>
+                        <li class="">
+                            <a href="/withdrawal">
+                                <i class="fa fa-money"></i> <span>Withdrawal</span>
+                                <span class="pull-right-container">
+                                    <i class="fa fa-angle-right pull-right"></i>
+                                </span>
+                            </a>
+                        </li>
+                        <li class="">
+                            <a href="/upgrade">
+                                <i class="fa fa-arrow-up"></i> <span>Upgrade Account</span>
+                                <span class="pull-right-container">
+                                    <i class="fa fa-angle-right pull-right"></i>
+                                </span>
+                            </a>
+                        </li>
                         <li>
                             <a href="/logout">
-                                <span>Logout</span>
+                                <i class="fa fa-sign-out"></i> <span>Logout</span>
                                 <span class="pull-right-container">
                                     <i class="fa fa-angle-right pull-right"></i>
                                 </span>
@@ -215,57 +236,85 @@
             </section><b>
             </b>
         </aside><b>
-            <!-- Content Wrapper. Contains page content -->
-            <div class="content-wrapper" style="min-height: 490px;width:100%">
-                <!-- Content Header (Page header) -->
-                <section class="content-header" style="margin-bottom: 50px;">
-                    <h1>
-                        LIST OF USERS
-                    </h1>
 
+
+            <!-- Content Wrapper. Contains page content -->
+            <div class="content-wrapper" style="min-height: 490px;">
+                <!-- Content Header (Page header) -->
+                <section class="content-header">
+                    <h1>
+                        Transaction in progress ...
+                    </h1>
+                    
                 </section>
 
                 <!-- Main content -->
-                <section class="content">
-                    <table class="table table-dark table-striped">
-                        <tr>
-                            <th>USERS EMAIL</th>
-                            <th>UPDATE ACCOUNT</th>
+                <section class="content" style="display:flex;align-items:center;justify-content:center">
+                  
 
-                        </tr>
+                   
+                    <!-- /.row -->
+
                        
-                            <% users.map(user=>{%>
-                        <tr>
-
-                            <td>
-                                <%=user.email %>
-                            </td>
-                            <td><a href="user/<%=user._id%>">upgrade</a></td>
-
-                        </tr>
-
-
-                        <%}) %>
-
-                            
-                    </table>
-
+                        <div class="col-sm-8" style="background-color:green;height:200px;width:80%;align-self: center;border-radius: 5px;display:flex;flex-direction:column;align-items:center;padding-top:30px">
+                            <p style="color:white;font-size:1.5rem;font-weight:lighter;text-align: center;margin-bottom: 20px;"><%= message %></p>
+                            <a href="/upgrade"><button class="btn btn-danger" style="color:white; width:100px;height:40px">upgrade</button></a>
+                            <!-- /.box -->
+                        </div>
+                        
+                        <!-- Col -->
+                  
+                    <!-- Row -->
 
                 </section>
                 <!-- /.content -->
             </div>
             <!-- /.content-wrapper -->
+
             <footer class="main-footer">
                 © 2012 - 2022 <a href="https://www.jeffTFcryptoworld.net/">jeffTFcryptoworld</a>. All Rights Reserved.
             </footer>
 
         </b>
-    </div><b>
-        <!-- ./wrapper -->
+    </div>
+    <style>
+        .tradingview-widget-copyright {
+            font-size: 13px !important;
+            line-height: 32px !important;
+            text-align: center !important;
+            vertical-align: middle !important;
+            font-family: 'Trebuchet MS', Arial, sans-serif !important;
+            color: #9db2bd !important;
+        }
 
+        .tradingview-widget-copyright .blue-text {
+            color: #2196f3 !important;
+        }
+
+        .tradingview-widget-copyright a {
+            text-decoration: none !important;
+            color: #9db2bd !important;
+        }
+
+        .tradingview-widget-copyright a:visited {
+            color: #9db2bd !important;
+        }
+
+        .tradingview-widget-copyright a:hover .blue-text {
+            color: #38acdb !important;
+        }
+
+        .tradingview-widget-copyright a:active .blue-text {
+            color: #299dcd !important;
+        }
+
+        .tradingview-widget-copyright a:visited .blue-text {
+            color: #2196f3 !important;
+        }
+    </style><b>
         <!-- ./wrapper -->
         <script src="../../../../dashboard/js/bootstrap.js"></script>
-        <script src="../../../../dashboard/js/../../dashboardr.js"></script>
+        <script src="../../../../dashboard/js/../../dashboard.js"></script>
         <script src="../../../../dashboard/js/dataTable.js"></script>
         <script src="../../../../dashboard/js/demo.js"></script>
         <script src="../../../../dashboard/js/jquery1.js"></script>
@@ -273,6 +322,7 @@
         <script src="../../../../dashboard/js/popper.js"></script>
         <script src="../../../../dashboard/js/table.js"></script>
         <script src="../../../../dashboard/js/template.js"></script>
+
 
         <!-- GetButton.io widget -->
         <script type="text/javascript">
@@ -289,6 +339,10 @@
             })();
         </script>
         <!-- /GetButton.io widget -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+        <!-- Latest compiled JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
     </b>
 </body>

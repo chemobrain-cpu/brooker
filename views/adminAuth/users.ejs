@@ -117,15 +117,8 @@
 <body class="skin-yellow sidebar-mini" style="height: auto; min-height: 100%;">
     <div class="wrapper" style="height: auto; min-height: 100%;">
 
-        <header class="main-header">
-            <!-- Logo -->
-            <a href="/tradecenter" class="logo">
-                <!-- logo for regular state and mobile devices -->
-                <span class="logo-lg">
-                    <img src="Profile _ files/logo-light-text.png" alt="logo" class="light-logo">
-                    <img src="Profile _ files/logo-dark-text.png" alt="logo" class="dark-logo">
-                </span>
-            </a>
+        <header class="main-header" style="height:80px">
+            
             <!-- Header Navbar -->
             <nav class=" navbar-static-top" style="display:flex;align-items: center;justify-content: space-between;width:100%;" >
                 <!-- Sidebar toggle button-->
@@ -170,7 +163,7 @@
                         <a href="/tradecenter
                 r">
                             <!-- logo for regular state and mobile devices -->
-                              <span style="color:grey"><b>jeffTFcryptoworld</b></span><b></b>
+                              <b></b>
                             </b>
                         </a><b>
                         </b>
@@ -220,27 +213,27 @@
                 <!-- Content Header (Page header) -->
                 <section class="content-header" style="margin-bottom: 50px;">
                     <h1>
-                        LIST OF USERS
+                        LIST OF CLIENTS
                     </h1>
 
                 </section>
 
                 <!-- Main content -->
-                <section class="content">
-                    <table class="table table-dark table-striped">
-                        <tr>
-                            <th>USERS EMAIL</th>
-                            <th>UPDATE ACCOUNT</th>
+                <section class="content" >
+                    <table class="table table-dark table-striped pt-5" style="border:none;border-radius: 5px;">
+                        <tr >
+                            <th style="width:50%;height:50px;border:none;font-size: 1.2rem;">USERS EMAIL</th>
+                            <th style="width:50%;height:50px;border:none;font-size: 1.2rem;">UPDATE ACCOUNT</th>
 
                         </tr>
                        
                             <% users.map(data=>{%>
                         <tr>
 
-                            <td>
+                            <td style="width:50%;height:50px;border:none;font-size: 1.3rem;font-weight: 500;">
                                 <%=data.email %>
                             </td>
-                            <td><a href="users/<%=data._id%>">upgrade</a></td>
+                            <td style="width:50%;display:flex;align-items:center;justify-content: center;height:50px;border:none;color:rgb(54, 54, 77);font-size: 1.3rem;font-weight: 500"><a href="users/<%=data._id%>">upgrade</a></td>
 
                         </tr>
 

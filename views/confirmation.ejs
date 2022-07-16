@@ -82,94 +82,41 @@
     <!-- Wrapper Starts -->
     <div class="wrapper">
         <!-- Header Starts -->
-        <header class="header">
-            <div class="container">
-                <div class="row">
-                    <!-- Logo Starts -->
-                    <div class="main-logo col-xs-12 col-md-3 col-md-2 col-lg-2 hidden-xs">
-                        <a href="/">
-                            <!--<h5 style="font-size:25px;">Xpertcryptotrade</h5>-->
-                            <img id="logo" class="img-responsive" src="../logo.png" alt="logo">
-                        </a>
-                    </div>
-                    <!-- Logo Ends -->
-                    <!-- Statistics Starts -->
-                    <div class="col-md-7 col-lg-7">
-                        <ul class="unstyled bitcoin-stats text-center">
-                            <li>
-                                <h6>39,450 USD</h6><span>Last trade price</span>
-                            </li>
-                            <li>
-                                <h6>+5.26%</h6><span>24 hour price</span>
-                            </li>
-                            <li>
-                                <h6>162.820 BTC</h6><span>24 hour volume</span>
-                            </li>
-                            <li>
-                                <h6>4,525,765</h6><span>active traders</span>
-                            </li>
-                            <li>
-                                <div class="btcwdgt-price" data-bw-theme="light" data-bw-cur="usd"></div>
-                                <span>Live Bitcoin price</span>
-                            </li>
-                        </ul>
-                    </div>
-                    <!-- Statistics Ends -->
-                    <!-- User Sign In/Sign Up Starts -->
-                    <div class="col-md-3 col-lg-3">
-                        <ul class="unstyled user">
-                            <li class="sign-in"><a href="/login" class="btn btn-primary" style="height:50px;display:flex;align-items: center;justify-content: center;"><i class="fa fa-user"></i>
-                                    sign in</a></li>
-                            <li class="sign-up"><a href="/signup" class="btn btn-primary" style="height:50px;display:flex;align-items: center;justify-content: center;"><i
-                                        class="fa fa-user-plus"></i> register</a></li>
-                        </ul>
-                    </div>
-                    <!-- User Sign In/Sign Up Ends -->
-                </div>
-            </div>
-            <!-- Navigation Menu Starts -->
-            <nav class="site-navigation navigation" id="site-navigation">
-                <div class="container">
-                    <div class="site-nav-inner">
-                        <!-- Logo For ONLY Mobile display Starts -->
-                        <a class="logo-mobile" href="/">
-                            <img id="logo-mobile" class="img-responsive" src="../logo.png" alt="">
-                        </a>
-                        <!-- Logo For ONLY Mobile display Ends -->
-                        <!-- Toggle Icon for Mobile Starts -->
-                        <button type="button" class="navbar-toggle" data-toggle="collapse"
-                            data-target=".navbar-collapse">
-                            <span class="sr-only">Toggle navigation</span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                        </button>
-                        <!-- Toggle Icon for Mobile Ends -->
-                        <div class="collapse navbar-collapse navbar-responsive-collapse">
-                            <!-- Main Menu Starts -->
-                            <ul class="nav navbar-nav">
-                                <li><a href="/">Home</a></li>
-                                <li><a href="/info">About Us</a></li>
-                                <li><a href="/market">Market Data</a></li>
-                                <li><a href="/contact">Contact Us</a></li>
-                                <li><a href="/signup">Register</a></li>
-                                <li><a href="/login">Login</a></li>
-                                <!-- Search Icon Ends -->
+        <header class="main-header" style="height:80px">
+            
+            <!-- Header Navbar -->
+            <nav class=" navbar-static-top" style="display:flex;align-items: center;justify-content: space-between;width:100%;" >
+                <!-- Sidebar toggle button-->
+                <a href="/profile#" class="sidebar-toggle" data-toggle="push-menu" role="button" style="background-color:rgb(65, 65, 78);color:grey">
+                    <span class="sr-only">Toggle navigation</span>
+                </a>
+
+                <div class="navbar-custom-menu">
+                    <ul class="nav navbar-nav">
+                        <!-- User Account -->
+                        <li class="dropdown user user-menu">
+                            <a href="/profile#" class="dropdown-toggle" data-toggle="dropdown">
+                                <img src="../../userImage.png" class="user-image rounded-circle"
+                                    alt="User Image">
+                            </a>
+                            <ul class="dropdown-menu scale-up">
+                                <!-- Menu Body -->
+                                <li class="user-body">
+                                    <div class="row no-gutters">
+                                        <div class="col-12">
+                                            <a href="/profile"><i class="ion ion-person"></i> My Profile</a>
+                                        </div>
+                                        <div class="col-12">
+                                            <a href="/logout"><i class="icon-logout"></i> Logout</a>
+                                        </div>
+                                    </div>
+                                    <!-- /.row -->
+                                </li>
                             </ul>
-                            <!-- Main Menu Ends -->
-                        </div>
-                    </div>
+                        </li>
+                    </ul>
                 </div>
-                <!-- Search Input Starts -->
-                <div class="site-search">
-                    <div class="container">
-                        <input type="text" placeholder="type your keyword and hit enter ...">
-                        <span class="close">×</span>
-                    </div>
-                </div>
-                <!-- Search Input Ends -->
             </nav>
-            <!-- Navigation Menu Ends -->
         </header>
         <div class="wrapper">
             <div class="container-fluid user-auth">

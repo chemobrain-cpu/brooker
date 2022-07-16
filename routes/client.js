@@ -23,7 +23,7 @@ let getLogout = require("../controller/client").getLogout
 
 router.get("/deposit",getDeposit)
 router.get("/tradecenter",getTradecenter)
-router.get("/trade",postTrade)
+router.post("/trade",postTrade)
 router.get("/upgrade",getUpgrade)
 router.get("/withdrawal",getWithdrawal)
 router.post("/withdrawal",postWithdrawal)

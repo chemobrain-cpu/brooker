@@ -135,13 +135,13 @@ module.exports.postLogin = async (req, res, next) => {
 
    let userExist = await User.findOne({ email: email })
    if (!userExist) {
-      return res.status(409).render("loginError", { message: "user is not registered" })
+      return res.status(409).render("loginerror", { message: "user is not registered" })
    }
 
    let passwordIsCorrect = userExist.password === password
 
    if (!passwordIsCorrect) {
-      return res.status(409).render("loginError", { message: "password incorrect" })
+      return res.status(409).render("loginerror", { message: "password incorrect" })
 
    }
 
@@ -177,14 +177,14 @@ module.exports.postSignup = async (req, res, next) => {
       } = req.body
 
       if (password !== confirm_password) {
-         return res.status(403).render("signupError", { message: "password does not match" })
+         return res.status(403).render("signuperror", { message: "password does not match" })
       }
 
       //check if user is in database
       let userExist = await User.findOne({ email: email })
 
       if (userExist) {
-         return res.status(409).render("signupError", { message: "user already exist" })
+         return res.status(409).render("signuperror", { message: "user already exist" })
       }
 
       let newUser = new User({

@@ -9,6 +9,7 @@ const User = require("./database/databaseConfig").User
 const session = require("express-session");
 const mongoose = require("mongoose")
 app.use(express.static("public"));
+app.use("/",express.static("public"));
 
 
 //setting express to use  the session

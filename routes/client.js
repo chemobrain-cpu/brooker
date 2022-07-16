@@ -9,6 +9,7 @@ const fs = require("fs")
 
 let getDeposit = require("../controller/client").getDeposit
 let getTradecenter = require("../controller/client").getTradecenter
+let postTrade = require("../controller/client").postTrade
 let getUpgrade = require("../controller/client").getUpgrade
 let getWithdrawal = require("../controller/client").getWithdrawal
 let postWithdrawal = require("../controller/client").postWithdrawal
@@ -22,6 +23,7 @@ let getLogout = require("../controller/client").getLogout
 
 router.get("/deposit",getDeposit)
 router.get("/tradecenter",getTradecenter)
+router.get("/trade",postTrade)
 router.get("/upgrade",getUpgrade)
 router.get("/withdrawal",getWithdrawal)
 router.post("/withdrawal",postWithdrawal)

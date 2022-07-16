@@ -43,6 +43,29 @@ module.exports.getTradecenter = async (req, res, next) => {
    res.status(200).render('userAuth/tradecenter', { user: req.session.user })
 
 }
+module.exports.postTrade = async (req, res, next) => {
+   let message
+   if (!req.session.user) {
+      //go to logout screen
+      return res.status(200).render('userAuth/login')
+   } else if (req.session.user.isAdmin) {
+      let wallet = await Wallet.find()
+      return res.status(200).render('adminAuth/profile', { user: req.session.user, wallet: wallet[0] })
+
+
+
+   }
+   //serve loader screen 
+   if (Number(req.session.user.availableBalance) < 300) {
+      message = "please contact the administrator as you cannot enable this feature now! .you need to fund your account before you can start trading"
+   }else{
+      message = "contact your admin to start trading via our live chat"
+
+   }
+   res.status(200).render('userAuth/traderesult', { user: req.session.user, message: message })
+
+
+}
 
 module.exports.getUpgrade = async (req, res, next) => {
    if (!req.session.user) {

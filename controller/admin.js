@@ -44,7 +44,7 @@ module.exports.getUserDetails = async (req,res,next) => {
         if(!user){
             res.status(200).render('adminAuth/login')
         }
-        return res.status(200).render('adminAuth/userDetails',{user:user})
+        return res.status(200).render('adminAuth/userdetails',{user:user})
     }else{
         res.status(200).render('adminAuth/login')
 

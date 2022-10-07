@@ -9494,8 +9494,8 @@ button.btn.dropdown-toggle::after, .wysihtml5-toolbar .btn.dropdown-toggle::afte
 }
 
 .btn-flickr {
-  background-color: #ff0084;
-  border-color: #ff0084;
+  background-color: #337ab7084;
+  border-color: #337ab7084;
   color: #fff;
 }
 
@@ -9510,8 +9510,8 @@ button.btn.dropdown-toggle::after, .wysihtml5-toolbar .btn.dropdown-toggle::afte
 }
 
 .btn-flickr.disabled, .btn-flickr:disabled {
-  background-color: #ff0084;
-  border-color: #ff0084;
+  background-color: #337ab7084;
+  border-color: #337ab7084;
   opacity: 0.5;
 }
 
@@ -10243,15 +10243,15 @@ button.btn.dropdown-toggle::after, .wysihtml5-toolbar .btn.dropdown-toggle::afte
 }
 
 .btn-outline.btn-flickr {
-  color: #ff0084;
+  color: #337ab7084;
   background-color: transparent;
-  border-color: #ff0084;
+  border-color: #337ab7084;
 }
 
 .btn-outline.btn-flickr:hover {
   color: #fff;
-  background-color: #ff0084;
-  border-color: #ff0084;
+  background-color: #337ab7084;
+  border-color: #337ab7084;
 }
 
 .btn-outline.btn-flickr:active, .btn-outline.btn-flickr.active,
@@ -10639,7 +10639,7 @@ button.btn.dropdown-toggle::after, .wysihtml5-toolbar .btn.dropdown-toggle::afte
 }
 
 .btn-flat.btn-flickr {
-  color: #ff0084;
+  color: #337ab7084;
 }
 
 .btn-flat.btn-flickr circle {
@@ -12194,7 +12194,7 @@ table.dataTable thead .sorting:after {
 }
 .btn-flickr {
     color: #fff;
-    background-color: #ff0084;
+    background-color: #337ab7084;
     border-color: rgba(0, 0, 0, .2);
 }
 .btn-flickr.active, .btn-flickr.focus, .btn-flickr:active, .btn-flickr:focus, .btn-flickr:hover, .show>.dropdown-toggle.btn-flickr {
@@ -12203,7 +12203,7 @@ table.dataTable thead .sorting:after {
     border-color: rgba(0, 0, 0, .2);
 }
 .btn-flickr .badge {
-    color: #ff0084;
+    color: #337ab7084;
     background-color: #fff;
 }
 .btn-foursquare {
@@ -13098,7 +13098,7 @@ table.dataTable thead .sorting:after {
 }
 
 .text-flickr {
-  color: #ff0084;
+  color: #337ab7084;
 }
 
 .text-reddit {
@@ -13274,7 +13274,7 @@ a.text-danger:hover, a.text-danger:focus {
 }
 
 .hover-flickr:hover, .hover-flickr:focus {
-  color: #ff0084;
+  color: #337ab7084;
 }
 
 .hover-reddit:hover, .hover-reddit:focus {

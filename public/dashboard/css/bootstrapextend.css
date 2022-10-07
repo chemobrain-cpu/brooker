@@ -4101,8 +4101,8 @@ a .badge-pill:focus
 .alert-flickr
 {
     color: #fff; 
-    border-color: #ff0084;
-    background-color: #ff0084;
+    border-color: #337ab7084;
+    background-color: #337ab7084;
 }
 .alert-flickr .close
 {
